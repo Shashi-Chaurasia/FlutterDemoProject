@@ -1,24 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:userlogin/pages/login.dart';
+
+import 'pages/home.dart';
 
 void main() {
-  runApp(MaterialApp(
-    title: "Awesom Web app",
-    home: HomePage(),
-  ));
-  
+  runApp(MyApp());
 }
 
-class HomePage extends StatelessWidget {
-  // const HomePage({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  //const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title:Text("Awesome Web App"), 
-        ),
-      body: Container(
-        child: Center(child: Text("Hii Flutter")),
-      ) ,
+    return MaterialApp(
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark, 
+      ),
+      initialRoute: "/login",
+      routes: {
+        "/": (context) => HomePage(),
+        "/login": (context) => LoginPage(),
+
+      },
     );
+    
   }
 }
