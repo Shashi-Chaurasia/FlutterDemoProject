@@ -1,35 +1,60 @@
-import 'package:flutter/material.dart'; 
+import 'dart:html';
 
+import 'package:flutter/material.dart'; 
+import 'package:google_fonts/google_fonts.dart';
+import 'package:userlogin/pages/home.dart';
 
 class LoginPage extends StatelessWidget {
+  // const LoginPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Material(
-      
-      child: Center(
-        child: Container(
-          child: Center(child: Text(
-            "User Login",
-            style: TextStyle(
-              fontSize: 35,
+      color: Colors.white,
+      child: Column(
+        children: [
+          Image.asset("assests/images/login.png" , height: 355,width: 400,),
+          Text(
+            "Welcome" , style: TextStyle(
+              fontSize: 22,
               fontWeight: FontWeight.bold,
-              color: Colors.black38,
-            ),  )),
-          padding: const EdgeInsets.all(8.0),
-          height: 450,
-          width: 600,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.grey, blurRadius: 0.05, offset: Offset(5, 5))
-            ],
-            color: Colors.teal,
-            gradient: LinearGradient(
-              colors: [Colors.blueGrey, Colors.lightGreenAccent],
             ),
           ),
-        ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 255.0 , vertical: 22.0),
+            child: Column(
+              children: [
+                TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Enter Your Username",
+                      labelText: "Username",
+                    ),
+                ),
+                TextFormField(
+                  obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: "Enter Your Password",
+                      labelText: "Password",
+                    ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      print("Login successful");
+
+                    }, 
+                    child: Text("Login"),
+                    style: TextButton.styleFrom(),)
+                
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
