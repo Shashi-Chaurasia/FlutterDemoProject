@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
         await Future.delayed(Duration(seconds: 1));
         await Navigator.pushNamed(context, MyRoutes.homeRoute);
         setState(() {
-          changeButton = false;
+          changeButton = false; 
         });
 
     }
@@ -94,12 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(
                       height: 20.0,
                       ),
-                      // ElevatedButton(
-                      //   onPressed: () {
-                      //     Navigator.pushNamed(context, MyRoutes.homeRoute);
-                      //   }, 
-                      //   child: Text("Login"),
-                      //   style: TextButton.styleFrom(minimumSize: Size(150, 50)),)
+          
                     InkWell(
                       onTap: () => moveToHome(context),
                       child:AnimatedContainer(

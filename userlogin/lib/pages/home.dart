@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:userlogin/widgets/drawer.dart';
+
 
 
 class HomePage extends StatelessWidget {
@@ -10,7 +12,13 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Awesome Web Aapp"),
       ),
-      
+      body: Center(
+        child: Container(
+          child: Text("welcome"),
+          
+        ),
+      ),
+      drawer:MyDrawer(),
     );
   }
 }
