@@ -1,3 +1,14 @@
+class CatalogModel {
+  static final items  = [
+  Item(
+    "001", 
+    "iphone13 pro" , 
+    "Apple iphone 13 generation", 
+    999, 
+    "#33505a", 
+    "assests/images/iphone13.png",)
+];
+}
 class Item{
   final String id;
   final String name;
@@ -12,12 +23,3 @@ class Item{
 
 }
 
-final products  = [
-  Item(
-    "001", 
-    "iphone13 pro" , 
-    "Apple iphone 13 generation", 
-    999, 
-    "#33505a", 
-    "assests/images/mypic.jpeg",)
-];
